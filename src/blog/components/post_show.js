@@ -15,7 +15,7 @@ class PostShow extends Component {
   onDeleteHandler() {
     const { id } = this.props.match.params;
     this.props.deletePost(id, () => {
-      this.props.history.push("/");
+      this.props.history.push("/blog");
     });
   }
 
@@ -25,7 +25,7 @@ class PostShow extends Component {
     if (!post) return <div>Loading</div>;
     return (
       <div>
-        <Link to="/">Back to index</Link>
+        <Link to="/blog">Back to index</Link>
         <button
           onClick={this.onDeleteHandler.bind(this)}
           className="btn btn-danger float-right"
