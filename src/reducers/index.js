@@ -1,14 +1,11 @@
 import { combineReducers } from "redux";
-import BlogReducer from "../blog/reducers";
+import BlogReducer from "../blog/reducers/index";
 
-// import BooksReducer from "./reducer_books";
-// import ActiveBook from "./reducer_active_book";
-
+const { posts, form } = BlogReducer;
 const rootReducer = combineReducers({
   state: (state = {}) => state,
-  blog: BlogReducer
-  //   books: BooksReducer,
-  //   activeBook: ActiveBook
+  posts,
+  form
 });
 
 export default rootReducer;
