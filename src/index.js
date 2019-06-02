@@ -7,6 +7,7 @@ import promise from "redux-promise";
 
 import App from "./components/app";
 import Blog from "./blog/index";
+import BookList from "./book-list/index";
 import reducers from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -17,7 +18,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/blog" component={Blog} />
-          {/* <Route path="/book-list" component={BookList} /> */}
+          <Route path="/book-list" component={BookList} />
           {/* <Route path="/react-basic" component={ReactBasic} /> */}
           {/* <Route path="/weather" component={Weather} /> */}
           <Route exac path="/" component={App} />
