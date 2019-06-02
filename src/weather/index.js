@@ -1,17 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import ReduxPromise from "redux-promise";
+import React, { Component } from "react";
 
-import App from "./components/app";
-import reducers from "./reducers";
+import SearchBar from "./containers/search_bar";
+import WeatherList from "./containers/weather_list";
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>,
-  document.querySelector(".container")
-);
+export default class App extends Component {
+  render() {
+    return (
+      <div className="row">
+        <SearchBar />
+        <WeatherList />
+      </div>
+    );
+  }
+}
