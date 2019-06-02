@@ -7,7 +7,7 @@ import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
 import VideoDetail from "./components/video_detail";
 
-const API_KEY = "AIzaSyBE-lXI6YpkVWdSvG7HopVOE9ehWh8-El8";
+const API_KEY = "AIzaSyA7T1zmBM4GcZrL10DE730n6C9TPCLxrYU";
 
 class App extends Component {
   constructor(props) {
@@ -48,4 +48,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
